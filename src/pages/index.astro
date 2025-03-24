@@ -1,0 +1,451 @@
+---
+import ProductItems from "../components/ProductItems.astro";
+---
+
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Shop.co</title>
+  </head>
+  <body>
+    <!-- sign up -->
+
+    <section class="text-white bg-black py-1">
+      <div class="container text-center relative">
+        <p class="text-sm sm:text-base">
+          Sign up and get 20% off to your first order. Sign Up Now
+        </p>
+        <button
+          type="button"
+          class="absolute top-0 right-0 z-10 hidden sm:block"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            ><path
+              fill="currentColor"
+              d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z"
+            ></path></svg
+          >
+        </button>
+      </div>
+    </section>
+
+    <!-- Nav Bar -->
+    <nav class="py-3">
+      <div class="container flex items-center gap-4">
+        <div class="flex items-center gap-2 md:gap-4">
+          <!-- drawer -->
+          <div class="drawer">
+            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+              <!-- Page content here -->
+              <label for="my-drawer" class="drawer-button md:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  ><g fill="none"
+                    ><path
+                      d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+                    ></path><path
+                      fill="currentColor"
+                      d="M20 17.5a1.5 1.5 0 0 1 .144 2.993L20 20.5H4a1.5 1.5 0 0 1-.144-2.993L4 17.5zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 0 1 0-3zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 1 1 0-3z"
+                    ></path></g
+                  ></svg
+                ></label
+              >
+            </div>
+            <div class="drawer-side">
+              <label
+                for="my-drawer"
+                aria-label="close sidebar"
+                class="drawer-overlay"></label>
+              <ul
+                class="menu bg-base-200 text-base-content min-h-full w-80 p-4"
+              >
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">On sale</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Brands</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <img src="/assets/SHOP.CO.png" alt="logo" />
+          <ul class="hidden md:flex items-center gap-4">
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">On sale</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Brands</a></li>
+          </ul>
+        </div>
+
+        <div class="flex-1">
+          <input
+            type="search"
+            placeholder="Search for products..."
+            class="bg-gray-100 w-full rounded-full px-4 py-2"
+          />
+        </div>
+
+        <div>
+          <a href=""
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              ><path
+                fill="currentColor"
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6m0 14c-2.03 0-4.43-.82-6.14-2.88a9.95 9.95 0 0 1 12.28 0C16.43 19.18 14.03 20 12 20"
+              ></path></svg
+            ></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-stone-100">
+      <div class="container">
+        <div class="flex flex-col md:flex-row gap-4 pt-12">
+          <section class="self-center">
+            <section>
+              <h1 class="text-4xl md:text-5xl font-bold">
+                FIND CLOTHES THAT MATHCHES YOUR STYLE
+              </h1>
+              <p class="mt-5 text-gray-500">
+                Browse through our diverse range of meticulously crafted
+                garments, designed to bring out your individuality and cater to
+                your sense of style.
+              </p>
+              <div class="mt-3 it">
+                <a
+                  href="#"
+                  class="w-full md:auto text-center bg-black hover:shadow-lg hover:shadow-black/50 text-xl text-white py-3 px-16 inline-block mt-5 rounded-full"
+                  >Shop Now</a
+                >
+              </div>
+            </section>
+            <section class="mt-10">
+              <ul class="grid grid-cole-2 sm:grid-cols-3">
+                <li class="stats-item border-r-2">
+                  <strong>200+</strong>
+                  <small>International Brands</small>
+                </li>
+                <li class="stats-item">
+                  <strong>2000+</strong>
+                  <small>Hight-Quality products</small>
+                </li>
+                <li
+                  class="stats-item sm:border-l-2 col-span-2 sm:col-span-1 item-center mt-4 sm:mt-0"
+                >
+                  <strong>30,000+</strong>
+                  <small>Happy Customers</small>
+                </li>
+              </ul>
+            </section>
+          </section>
+          <section class="self-end">
+            <img src="/assets/head.png" alt="head" />
+          </section>
+        </div>
+      </div>
+    </header>
+    <section class="bg-black py-6">
+      <div class="container">
+        <div class="flex flex-wrap gap-16 justify-center items-center">
+          <img class="w-auto h-6" src="/assets/versace.png" alt="Versace" />
+          <img class="w-auto h-6" src="/assets/zara.png" alt="Zara" />
+          <img class="w-auto h-6" src="/assets/gucci.png" alt="Gucci" />
+          <img class="w-auto h-6" src="/assets/prada.png" alt="Prada" />
+          <img
+            class="w-32 h-auto"
+            src="/assets/calvin.png"
+            alt="Calvin Klein"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="pt-12 mt-6">
+      <div class="container">
+        <h2 class="text-4xl sm:text-5xl font-bold text-center">NEW ARRIVALS</h2>
+        <ul class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-14">
+          <ProductItems
+            name="T-SHIRT WITH TAPE DETAILS"
+            price="120"
+            star="4.8"
+            image="/assets/T-shirt.png"
+          />
+          <ProductItems
+            name="SKINNY FIT JEANS"
+            price="99.99"
+            star="5"
+            sale={{ percentage: 20, price: 79.99 }}
+            image="/assets/jeans.png"
+          />
+          <ProductItems
+            name="CHECKERED SHIRT"
+            price="180"
+            star="3.8"
+            image="/assets/T-shirt2.png"
+          />
+          <ProductItems
+            name="SLEEVE STRIPED T-SHIRT"
+            price="99.99"
+            star="4"
+            image="/assets/T-shirt3.png"
+          />
+        </ul>
+        <div class="mt-10 text-center">
+          <a
+            href="#"
+            class="border border-gray-300 px-24 py-4 inline-block rounded-full"
+            >View All</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!--Browse By Dress Styles -->
+    <section>
+      <div class="container">
+        <div class="rounded-3xl bg-zinc-100 py-8 md:py-16 px-6 md:px-10 mt-7">
+          <h2 class="text-3xl sm:text-4xl font-bold
+					text-center mb-10">
+            BROWSE BY DRESS STYLE
+          </h2>
+          <ul class="grid gap-4 grid-cols-1 md:grid-cols-8">
+            <li class="md:col-span-3">
+              <a
+                class="dress-style-item w-auto h-auto"
+                href="#"
+                style="background-image: url('/assets/casual1.png');"
+              >
+                Casual
+              </a>
+            </li>
+            <li class="md:col-span-5">
+              <a
+                class="dress-style-item"
+                href="#"
+                style="background-image: url('/assets/formal.png');">Formal</a
+              >
+            </li>
+            <li class="md:col-span-5">
+              <a
+                class="dress-style-item"
+                href="#"
+                style="background-image: url('/assets/party.png');">Party</a
+              >
+            </li>
+            <li class="md:col-span-3">
+              <a
+                class="dress-style-item"
+                href="#"
+                style="background-image: url('/assets/gym.png');">Gym</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Happy Customers -->
+    <section class="pt-12">
+      <div class="container">
+        <h2 class="text-4xl font-bold">OUR HAPPY CUSTOMERS</h2>
+        <ul class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <li class="border border-gray-300 rounded-2xl py-6 px-8 space-y-2">
+            <span class="flex text-yellow-400">
+              {
+                Array.from({ length: 5 }, () => (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"
+                    />
+                  </svg>
+                ))
+              }
+            </span>
+            <h3 class="flex items-center gap-2">
+              <span class="font-bold text-xl">John Doe</span>
+              <svg
+                class="text-green-600"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                ><path
+                  fill="currentColor"
+                  d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"
+                ></path></svg
+              >
+            </h3>
+            <q class="text-gray-600"
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Deserunt quam laborum pariatur cupiditate totam a!</q
+            >
+          </li>
+          <li class="border border-gray-300 rounded-2xl py-6 px-8 space-y-2">
+            <span class="flex text-yellow-400">
+              {
+                Array.from({ length: 5 }, () => (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"
+                    />
+                  </svg>
+                ))
+              }
+            </span>
+            <h3 class="flex items-center gap-2">
+              <span class="font-bold text-xl">John Doe</span>
+              <svg
+                class="text-green-600"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                ><path
+                  fill="currentColor"
+                  d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"
+                ></path></svg
+              >
+            </h3>
+            <q class="text-gray-600"
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Deserunt quam laborum pariatur cupiditate totam a!</q
+            >
+          </li>
+          <li class="border border-gray-300 rounded-2xl py-6 px-8 space-y-2">
+            <span class="flex text-yellow-400">
+              {
+                Array.from({ length: 5 }, () => (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"
+                    />
+                  </svg>
+                ))
+              }
+            </span>
+            <h3 class="flex items-center gap-2">
+              <span class="font-bold text-xl">John Doe</span>
+              <svg
+                class="text-green-600"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                ><path
+                  fill="currentColor"
+                  d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"
+                ></path></svg
+              >
+            </h3>
+            <q class="text-gray-600"
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Deserunt quam laborum pariatur cupiditate totam a!</q
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="relative mt-44 sm:mt-36">
+      <div class="top-0 left-0 right-0 absolute -translate-y-1/2 container">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between bg-black py-6 px-6 md:px-16 rounded-2xl gap-4"
+        >
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+            STAY UPTO DATE ABOUT <br /> OUR LATEST OFFERS
+          </h2>
+          <form class="max-w-sm">
+            <input
+              type="text"
+              placeholder="Enter your email address"
+              class="bg-zinc-100 w-full rounded-full py-2 sm:py-3 px-5"
+            />
+            <button
+              class="bg-white hover:bg-zinc-300 transition text-black py-2 sm:py-3 mt-3 inline-block rounded-full w-full"
+              >Subscribe to Newsletter</button
+            >
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-200 pt-24 md:pt-20">
+      <div class="container">
+        <section
+          class="flex flex-col md:flex-row items-center justify-between gap-4 pt-12 pb-6"
+        >
+          <div class="flex flex-col sm:flex-row items-center gap-4">
+            <img src="https://placehold.co/150x60" alt="logo" />
+            <ul class="flex flex-wrap items-center gap-4">
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">On sale</a></li>
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Brands</a></li>
+            </ul>
+          </div>
+          <ul class="flex items-center gap-4">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </section>
+
+        <!-- Copyright -->
+        <section class="border-t-2 border-gray-300">
+          <p class="text-center text-gray-700 py-4">
+            Copyright 2025 Shop.co All rights reserved.
+          </p>
+        </section>
+      </div>
+
+      <style>
+        .stats-item {
+          @apply flex flex-col gap-1 first:pl-0 px-4 last:pr-0;
+        }
+        .stats-item strong {
+          @apply text-3xl lg:text-4xl font-bold;
+        }
+        .stats-item small {
+          @apply text-gray-500;
+        }
+        .dress-style-item {
+          @apply bg-white h-52 block rounded-xl p-6 text-2xl font-bold bg-contain bg-no-repeat bg-right;
+        }
+      </style>
+    </footer>
+  </body>
+</html>
