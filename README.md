@@ -1,5 +1,7 @@
 # Shopping Website Clone
 
+https://shopping-website-clone-gilt.vercel.app/
+
 This is a clone of a shopping website, built using Astro for the frontend and various web technologies. It showcases an e-commerce platform with features like product listings, category navigation, and more.
 
 ## Features
